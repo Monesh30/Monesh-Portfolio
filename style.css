@@ -1,0 +1,67 @@
+/* Floating Profile */
+.profile-card {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 40px auto;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a2a72;
+}
+
+/* Interactive Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline-item {
+  padding: 20px;
+  border-left: 3px solid #2a2a72;
+  margin-bottom: 30px;
+  position: relative;
+}
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2a2a72;
+  left: -9px;
+  top: 25px;
+}
+
+/* Skill Bars */
+.skill-bar {
+  margin: 15px 0;
+}
+.bar-container {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+.bar {
+  height: 100%;
+  border-radius: 5px;
+  background: #2a2a72;
+  animation: fill 2s ease-in-out;
+}
+
+@keyframes fill {
+  from { width: 0%; }
+  to { width: attr(data-skill); }
+}
